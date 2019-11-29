@@ -1,13 +1,16 @@
-import React from 'react';
-import Table from '../../components/Table'
+import React from "react";
+import Table from "../../components/Table";
+import Modal from "../../components/Modal";
+export default function Home(){
 
-export default function Home() {
-  return (
-    <>
-      <p>what to put here?</p>
-      <section className="container">
-        <Table />
-      </section>
-    </>
-  );
-}
+    return (
+      <>
+        <p>what to put here?</p>
+        <section className="container">
+          <Table/>
+          <Modal/>
+        </section>
+      </>
+    );
+  }
+

@@ -1,31 +1,38 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import TableData from "../TableData";
+import tests from "../../testing.json";
+export default class Table extends Component {
+  state = {
+    tests
+  };
 
-export class Table extends Component {
   render() {
     return (
       <div>
         <table className="responsive-table">
           <thead>
-            <tr>
-              <th>Date</th>
-              <th>Name</th>
-              <th>Title</th>
-              <th>School</th>
-            </tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>School</th>
           </thead>
 
           <tbody>
-            <tr>
-              <td>11/27/2019</td>
-              <td>Lawrence</td>
-              <td>HACKATHON</td>
-              <td>Bothell</td>
-            </tr>
+            {/* <tr> */}
+              {this.state.tests.map(test => {
+                return (
+                  <TableData
+                    date={test.date}
+                    name={test.name}
+                    school={test.school}
+                    title={test.title}
+                  />
+                );
+              })}
+            {/* </tr> */}
           </tbody>
         </table>
       </div>
     );
   }
 }
-
-export default Table;
