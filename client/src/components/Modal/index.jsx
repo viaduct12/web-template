@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import Form from '../Form';
 import './style.css';
 
 const display = {
@@ -9,6 +10,7 @@ const hide = {
   display: "none"
 };
 export default class Modal extends Component {
+  
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -32,6 +34,7 @@ export default class Modal extends Component {
         <div className="modal-content">
           <h4>Agenda</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus eveniet sit culpa, animi repellat provident debitis modi fugiat sed? Libero quod nam placeat minima reiciendis nesciunt recusandae soluta dolores.</p>
+          <Form/>
         </div>
         <div className="modal-footer">
           <a

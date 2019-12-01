@@ -50,9 +50,9 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/signup"
+                to="/register"
                 className={
-                  window.location.pathname === "/signup"
+                  window.location.pathname === "/register"
                     ? "nav-link active"
                     : "nav-link"
                 }

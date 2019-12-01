@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import Calendar from './pages/Calendar';
 import Home from './pages/Home';
 // import Login from './pages/Login';
-// import SignUp from './pages/SignUp';
+import Register from './pages/Register';
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
       <Navbar />
       <Route exact path='/' component={ Home } />
       <Route exact path='/calendar' component={ Calendar } />
-      {/* <Route exact path='/signup' component={ SignUp } />
-      <Route exact path='/login' component={ Login } /> */}
+      <Route exact path='/register' component={ Register } />
+      {/* <Route exact path='/login' component={ Login } /> */}
     </Router>
   );
 }

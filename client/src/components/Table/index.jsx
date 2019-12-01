@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import TableData from "../TableData";
 import tests from "../../testing.json";
-export default class Table extends Component {
-  state = {
-    tests
-  };
 
-  render() {
+export default function Table() {
+
+  const [datas, setData] = useState(tests);
+  
     return (
       <div>
         <table className="responsive-table">
@@ -19,13 +18,13 @@ export default class Table extends Component {
 
           <tbody>
             {/* <tr> */}
-              {this.state.tests.map(test => {
+              {datas.map(data => {
                 return (
                   <TableData
-                    date={test.date}
-                    name={test.name}
-                    school={test.school}
-                    title={test.title}
+                    date={data.date}
+                    name={data.name}
+                    school={data.school}
+                    title={data.title}
                   />
                 );
               })}
@@ -35,4 +34,3 @@ export default class Table extends Component {
       </div>
     );
   }
-}
